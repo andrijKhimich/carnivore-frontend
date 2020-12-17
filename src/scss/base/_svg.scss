@@ -1,0 +1,12 @@
+.svg-tools {
+  width: 20px;
+  height: 20px;
+  fill: $black;
+  transition: fill $hover-duration $timing;
+
+  @include rh(1024) {
+    &:hover {
+      fill: $primary;
+    }
+  }
+}

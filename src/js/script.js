@@ -118,8 +118,8 @@ $(document).ready(function () {
 //   nextArrow: $('.testimonials-slider_next')
 // });
 // });
-svg4everybody();
 
+svg4everybody();
 function testWebP(callback) {
 	var webP = new Image();
 	webP.onload = webP.onerror = function () {

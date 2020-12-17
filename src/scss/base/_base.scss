@@ -56,6 +56,12 @@ h6 {
 h1 {
   font-size: 74px;
   line-height: 0.972em;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  span {
+    color: $primary;
+  }
 }
 
 h2 {
