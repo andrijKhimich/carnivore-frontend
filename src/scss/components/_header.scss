@@ -5,23 +5,19 @@
   left: 0;
   width: 100%;
   padding: 43px 0 37px;
-
-  &::before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: $black;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: opacity $duration $timing, transform $duration $timing;
   &-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  &.hidden {
+    transform: translate(0, -50px);
+    opacity: 0;
+  }
 }
 
 .logo {
@@ -73,6 +69,7 @@
       position: relative;
       letter-spacing: .05em;
       padding: 2px 5px;
+      transition: color $hover-duration $timing;
 
       &::before {
         content: "";
@@ -83,7 +80,7 @@
         bottom: 1px;
         left: 0;
         z-index: -1;
-        transition: height $hover-duration $timing, color .6s $timing;
+        transition: height $hover-duration $timing;
       }
 
       @include rh(1024) {

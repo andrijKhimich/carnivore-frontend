@@ -134,8 +134,8 @@ gulp.task("images", function () {
 });
 
 gulp.task("webp", function () {
-	return gulp
-		.src("src/img/**/*.*")
+  return gulp
+    .src(["src/img/**/*.png", "src/img/**/*.jpg"])
 		.pipe(
 			webp({
 				quality: 70,
