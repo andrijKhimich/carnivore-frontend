@@ -85,7 +85,8 @@ gulp.task("js", function () {
 			// js libs uncomment what you need
 			"node_modules/jquery/dist/jquery.min.js",
 			"node_modules/slick-carousel/slick/slick.min.js",
-			"node_modules/svg4everybody/dist/svg4everybody.min.js",
+      "node_modules/svg4everybody/dist/svg4everybody.min.js",
+      "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
 			"src/js/script.js",
 		])
 		.pipe(sourcemaps.init())

@@ -1,5 +1,12 @@
 .main {
   padding-top: 122px;
+  @include d(1500) {
+    padding-top: 82px;
+  }
+
+  @include d(1199) {
+    padding-top: 77px;
+  }
 }
 
 .site-title {
@@ -8,6 +15,18 @@
   transform: translate(0, 0);
   padding: 207px 30px 292px 0;
   transition: transform $duration $timing, opacity $duration $timing;
+
+  @include d(1500) {
+    padding: 160px 30px 170px 0;
+  }
+
+  @include d(1199) {
+    padding: 100px 0 130px 0;
+  }
+
+  @include d(768) {
+    padding: 80px 0 100px;
+  }
 
   &.hidden {
     transform: translate(30px, 0);
@@ -19,8 +38,6 @@
   line-height: 1.4em;
   max-width: 550px;
   margin-bottom: 32px;
-
-
 
   span {
     color: $primary;
@@ -50,6 +67,12 @@
     transform: translate(0, 0);
     transition: transform $duration $timing, opacity $duration $timing;
 
+    @include d(768) {
+      max-width: 100vw;
+      position: static;
+      padding-bottom: 54%;
+    }
+
     &.hidden {
       transform: translate(-30px, 0);
       opacity: 0;
@@ -68,6 +91,14 @@
   transform: translate(0, 0);
   transition: opacity $duration $timing, transform $duration $timing;
 
+  .line-vert {
+    @include d(991) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
   &.hidden {
     transform: translate(0, 50px);
     opacity: 0;
@@ -78,6 +109,18 @@
     align-items: center;
     justify-content: space-between;
     padding: 93px 35px 99px 0;
+
+    @include d(1800) {
+      padding: 50px 20px 30px 0;
+    }
+
+    @include d(1320) {
+      padding: 40px 0 30px 0;
+    }
+
+    @include d(991) {
+      padding: 20px 0;
+    }
   }
 
   &__text {
@@ -86,9 +129,42 @@
     font-weight: 900;
     width: 250px;
 
+    @include d(1800) {
+      font-size: 22px;
+      width: 200px;
+    }
+
+    @include d(1320) {
+      font-size: 18px;
+      width: 160px;
+    }
+
+    @include d(1199) {
+      font-size: 16px;
+    }
+
+    @include d(400) {
+      font-size: 14px;
+      width: 130px;
+    }
+
     &:last-of-type {
       width: 100px;
       margin-left: 90px;
+
+      @include d(1800) {
+        margin-left: 15px;
+      }
+
+      @include d(1199) {
+        margin-left: 10px;
+        width: 80px;
+      }
+
+      @include d(400) {
+        width: 50px;
+      }
+
     }
   }
 
@@ -101,6 +177,30 @@
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: $primary;
+
+    @include d(1500) {
+      font-size: 30px;
+    }
+
+    @include d(1199) {
+      font-size: 20px;
+    }
+
+    @include d(991) {
+      font-size: 36px;
+    }
+
+    @include d(575) {
+      font-size: 28px;
+    }
+
+    @include d(480) {
+      font-size: 20px;
+    }
+
+    @include d(400) {
+      font-size: 16px;
+    }
   }
 
   &__img {
@@ -108,6 +208,14 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+
+    @include d(991) {
+      padding: 40px 0;
+    }
+
+    @include d(575) {
+      padding: 20px 0;
+    }
   }
 
   &-gallery {
@@ -122,7 +230,11 @@
       position: relative;
       height: 35px;
       width: 20%;
-      padding: 0 20px;
+      margin: 0 10px;
+
+      @include d(575) {
+        margin: 0 5px;
+      }
 
       img {
         position: absolute;
@@ -131,6 +243,18 @@
         transform: translate(-50%, -50%);
         filter: grayscale(1);
         width: auto;
+
+        @include d(1500) {
+          width: 100%;
+        }
+
+        @include d(991) {
+          width: auto;
+        }
+
+        @include d(768) {
+          width: 100%;
+        }
       }
     }
   }
@@ -139,6 +263,14 @@
 .trades {
   &__content {
     padding: 168px 260px 128px 0;
+
+    @include d(1500) {
+      padding: 110px 80px 50px 0;
+    }
+
+    @include d(991) {
+      padding: 60px 15px 10px 0;
+    }
   }
 
   &-list {
@@ -146,10 +278,19 @@
     flex-wrap: wrap;
     margin: 0 -20px;
 
+    @include d(575) {
+      margin: 0 -10px;
+    }
+
     &__item {
       flex: 0 0 33.333%;
       padding: 0 20px;
       margin-bottom: 45px;
+
+      @include d(575) {
+        flex: 0 0 50%;
+        padding: 0 10px;
+      }
 
       p {
         line-height: 1.3em;
@@ -174,6 +315,14 @@
     background-color: #c4c4c4;
     background-blend-mode: luminosity;
     opacity: .6;
+
+    @include d(768) {
+      position: static;
+      // height: 400px;
+      padding-bottom: 60%;
+      width: 100vw;
+      margin: 0 -15px;
+    }
   }
 
   &__phone {
@@ -181,11 +330,29 @@
     left: -50%;
     top: 50%;
     transform: translate(80%, -50%);
+
+    @include d(1500) {
+      width: 240px;
+      left: -40%;
+    }
+
+    @include d(768) {
+      display: none;
+    }
   }
 }
 
 .testimonials {
   padding-top: 157px;
+
+  @include d(1500) {
+    padding-top: 100px;
+  }
+
+  &-container {
+    border: 1px solid $black;
+    overflow: hidden;
+  }
 
   .title-2,
   & h2 {
@@ -200,21 +367,80 @@
   &__title {
     display: flex;
     align-items: center;
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%;
+    flex: 0 0 47%;
+    max-width: 47%;
     height: 157px;
-    padding-left: 19%;
+    padding: 49px 0 49px 24%;
     text-transform: uppercase;
+    position: relative;
+    transition: color $hover-duration $timing;
+    margin-left: -80px;
+    border-right: 1px solid $black;
+
+    @include d(1919) {
+      margin-left: -15px;
+    }
+
+    @include d(1199) {
+      padding: 20px 0 20px 20px;
+    }
+
+    @include d(768) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+      border-right: none;
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 200%;
+      height: 1px;
+      background-color: $black;
+      bottom: 0;
+
+      @include d(768) {
+        bottom: auto;
+        top: -1px;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 7px;
+      height: 0;
+      background-color: $primary;
+
+      @include d(768) {
+        right: -15px;
+      }
+    }
 
     &.open {
       color: $primary;
+
+      &:before {
+        height: 100%;
+        transition: height $hover-duration $timing;
+
+      }
     }
   }
 
   &__name {
     font-weight: 500;
     pointer-events: none;
-
   }
 
   &__user {
@@ -228,17 +454,39 @@
 
   &__content {
     padding: 10px;
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%;
     position: absolute;
     top: 0;
-    right: 0;
-    max-width: 820px;
+    right: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     display: none;
+
+    @include d(1800) {
+      width: 53%;
+      right: 0;
+    }
+
+    @include d(1500) {
+      height: auto;
+    }
+
+    @include d(768) {
+      position: relative;
+      width: 100%;
+
+      &::before {
+        content: "";
+        // border-bottom: 1px solid #000;
+        width: 100vw;
+        height: 1px;
+        background-color: $black;
+        position: absolute;
+        bottom: 0;
+        left: -15px;
+      }
+    }
 
     &.open {
       display: flex;
@@ -246,6 +494,8 @@
   }
 
   &__text {
+    max-width: 820px;
+
     p {
       &:not(:last-child) {
         margin-bottom: 20px;
@@ -254,6 +504,114 @@
 
     span {
       font-weight: 700;
+    }
+  }
+}
+
+.banner_sm {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: #c4c4c4;
+  background-blend-mode: luminosity;
+  height: 304px;
+  opacity: .5;
+
+  @include d(575) {
+    height: auto;
+    padding-bottom: 40%;
+  }
+}
+
+.daily {
+  padding-top: 195px;
+  padding-bottom: 400px;
+  position: relative;
+  border-top: 1px solid $black;
+  border-bottom: 1px solid $black;
+  overflow: hidden;
+
+  @include d(1500) {
+    padding-top: 130px;
+    padding-bottom: 340px;
+  }
+
+  @include d(1199) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
+  @include d(991) {
+    padding-bottom: 0;
+  }
+
+  &-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 43vw;
+    height: 100%;
+    max-height: 430px;
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #c4c4c4;
+    background-blend-mode: luminosity;
+
+    @include d(1199) {
+      max-height: 260px;
+    }
+
+    @include d(991) {
+      position: static;
+      padding-bottom: 50%;
+      width: 100vw;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 1px;
+      height: 250%;
+      background-color: $black;
+    }
+  }
+
+  &__content {
+    max-width: 560px;
+
+    @include d(991) {
+      margin-bottom: 60px;
+    }
+
+    p {
+      line-height: 1.4em;
+      margin-bottom: 34px;
+    }
+  }
+}
+
+.best {
+  @include d(1199) {
+    padding: 40px 0;
+  }
+
+  &__title {
+    margin-top: 175px;
+
+    @include d(1199) {
+      margin-top: 60px;
+    }
+
+    .title-2,
+    & h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 30px;
     }
   }
 }

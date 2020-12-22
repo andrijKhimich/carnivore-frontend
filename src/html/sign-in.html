@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Sign in</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper sign-in-page js-fadeIn">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="sign-in">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <div class="sign-in__content">
+                <h3 class="title-3">Account <span>sign in</span></h3>
+                <p>Sign in to your account to access your profile, history, and any private pages you've been granted
+                  access to.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <div class="sign-in__form">
+                <form>
+                  <div class="form__body">
+                    <div class="form__box">
+                      <input type="email" placeholder="Enter Your Email" class="custom-input">
+                    </div>
+                    <div class="form__box">
+                      <input type="password" placeholder="Enter Your Password" class="custom-input">
+                    </div>
+                  </div>
+                  <a href="#" class="link">Reset password</a>
+                  <div class="form__btns">
+                    <input type="submit" class="btn btn_sm" value="Sign in">
+                    <div class="form__hint">
+                      <p>Not a member?</p>
+                      <a href="sign-up.html" class="link_lg">Create account</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('links/_scripts.html')
+</body>
+
+</html>

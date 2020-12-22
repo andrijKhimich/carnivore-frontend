@@ -3,7 +3,10 @@
   height: 20px;
   fill: $black;
   transition: fill $hover-duration $timing;
-
+  @include d(575) {
+    width: 16px;
+    height: 16px;
+  }
   @include rh(1024) {
     &:hover {
       fill: $primary;

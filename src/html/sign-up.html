@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Sign up</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper sign-in-page js-fadeIn">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="sign-in">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <div class="sign-in__content">
+                <h3 class="title-3"><span>Create</span> Account</h3>
+                <p>By creating an account, you may receive newsletters or promotions.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <div class="sign-up__form">
+                <form>
+                  <div class="form__body">
+                    <div class="form__box">
+                      <input type="text" placeholder="First Name" class="custom-input">
+                    </div>
+                    <div class="form__box">
+                      <input type="text" placeholder="Last name" class="custom-input">
+                    </div>
+                    <div class="form__box">
+                      <input type="email" placeholder="E-mail" class="custom-input">
+                    </div>
+                    <div class="form__box">
+                      <input type="tel" placeholder="Phone number" class="custom-input">
+                    </div>
+                  </div>
+                  <div class="form__btns">
+                    <input type="submit" class="btn btn_sm" value="Create account">
+                    <div class="form__hint">
+                      <p>Already have an account?</p>
+                      <a href="sign-in.html" class="link_lg">Sign in</a>
+                    </div>
+                  </div>
+                  <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('links/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Product 1-2</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper product-page js-fadeIn">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="product">
+        <div class="payment__form">
+          <form>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-xl-5 offset-xl-1">
+                  <div class="product__content">
+                    <h3 class="title-3">Start your <span>14 day</span> free tria</h3>
+                    <div class="form__container">
+                      <label for="payMethod" class="custom-label">Add payment method</label>
+                      <div class="form__box select__box">
+                        <select name="payMethod" id="payMethod" class="custom-select">
+                          <option value="creditCard">Credit card</option>
+                          <option value="2">Method 2</option>
+                        </select>
+                      </div>
+                      <ul class="pay-list">
+                        <li class="pay-list__item">
+                          <img src="img/product/visa.png" alt="visa" class="pay-list__img">
+                        </li>
+                        <li class="pay-list__item">
+                          <img src="img/product/master.png" alt="master card" class="pay-list__img">
+                        </li>
+                        <li class="pay-list__item">
+                          <img src="img/product/pay-pal.png" alt="pay-pal" class="pay-list__img">
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form__container">
+                      <label for="cardDetails" class="custom-label">Credit card details</label>
+                      <div class="form__box">
+                        <input type="text" id="cardDetails" class="custom-input">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__container">
+                        <label for="firstName" class="custom-label">First name</label>
+                        <div class="form__box">
+                          <input type="text" id="firstName" class="custom-input">
+                        </div>
+                      </div>
+                      <div class="form__container">
+                        <label for="lastName" class="custom-label">Last name</label>
+                        <div class="form__box">
+                          <input type="text" id="lastName" class="custom-input">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__container">
+                      <label for="billingAddress" class="custom-label">Billing address</label>
+                      <div class="form__box">
+                        <input type="text" id="billingAddress" class="custom-input">
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__container">
+                        <label for="zipCode" class="custom-label">Zip code</label>
+                        <div class="form__box">
+                          <input type="text" id="zipCode" class="custom-input">
+                        </div>
+                      </div>
+                      <div class="form__container">
+                        <label for="phoneNumber" class="custom-label">Phone number</label>
+                        <div class="form__box">
+                          <input type="text" id="phoneNumber" class="custom-input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-xl-5 offset-xl-1">
+                  <div class="product__content">
+                    <div class="form__container">
+                      <div class="form__box select__box">
+                        <select name="payPlan" id="payPlan" class="custom-select">
+                          <option value="monthPlan">Monthly Plan - $175/month</option>
+                          <option value="annualPlan">Annual Plan - $1785/annual (Save 15%)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form__pane">
+                      <div class="form__pane_top">
+                        <table>
+                          <tr>
+                            <td>Subtotal</td>
+                            <td>$ <span>175.00</span>/mo</td>
+                          </tr>
+                          <tr>
+                            <td>DUE NOW</td>
+                            <td>$ <span>0.00</span></td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="form__pane_bottom">
+                        <table>
+                          <tr>
+                            <td>
+                              Starting Dec 02
+                              <span>(14 days from today)</span>
+                            </td>
+                            <td>$ <span>175.00</span>/mo</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </section>
+    </main>
+  </div>
+  @@include('links/_scripts.html')
+</body>
+
+</html>

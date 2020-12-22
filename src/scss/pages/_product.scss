@@ -1,0 +1,78 @@
+.product-page {
+  min-height: 100vh;
+  border-bottom: 1px solid $black;
+
+  .header {
+
+    .nav,
+    .humburger {
+      display: none;
+    }
+  }
+}
+
+.product {
+  padding-top: 144px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100vh;
+    background-color: $black;
+
+    @include d(768) {
+      display: none;
+    }
+  }
+
+  @include d(1500) {
+    padding-top: 100px;
+  }
+
+  @include d(1199) {
+    padding-top: 80px;
+  }
+
+  @include d(991) {
+    padding-top: 60px;
+  }
+
+  &-list {
+    max-width: 450px;
+    margin: 60px 0;
+
+    @include d(991) {
+      margin: 30px 0;
+    }
+
+    &__item {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+
+        @include d(991) {
+          margin-bottom: 30px;
+        }
+      }
+
+      img,
+      picture {
+        max-width: 50px;
+        margin-right: 35px;
+
+        @include d(991) {
+          margin-right: 20px;
+          max-width: 40px;
+        }
+      }
+    }
+  }
+  &__content {
+    max-width: 565px;
+  }
+}

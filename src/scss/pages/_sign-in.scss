@@ -1,0 +1,44 @@
+.sign-in {
+  padding-top: 144px;
+  position: relative;
+
+  @include d(1500) {
+    padding-top: 100px;
+  }
+
+  @include d(1199) {
+    padding-top: 80px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 1px;
+    height: 100vh;
+    background-color: $black;
+    @include d(768) {
+      display: none;
+    }
+  }
+
+  &-page {
+    min-height: 100vh;
+    position: relative;
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 360px;
+
+    @include d(768) {
+      margin-bottom: 40px;
+    }
+  }
+}

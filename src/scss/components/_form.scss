@@ -1,0 +1,166 @@
+.sign-in__form,
+.sign-up__form,
+.product__form {
+  max-width: 565px;
+  color: $gray;
+  font-size: 16px;
+}
+
+
+.form {
+  &__body {
+    position: relative;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -20px;
+
+    @include d(768) {
+      margin: 0 -10px;
+    }
+
+    .form__container {
+      width: 50%;
+      flex: 0 0 50%;
+      padding: 0 20px;
+
+      @include d(768) {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 9px;
+
+    @include d(575) {
+      padding-bottom: 15px;
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      width: 4px;
+      height: 65px;
+      background-color: $primary;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      right: 0;
+
+      @include d(1199) {
+        height: 55px;
+      }
+
+      @include d(575) {
+        height: 50px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 15px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+    margin: 30px 0;
+
+    @include d(768) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__hint {
+    font-size: 14px;
+    font-weight: 300;
+    color: $gray;
+    margin-left: 30px;
+
+    @include d(768) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
+}
+
+.custom-input {
+  width: 100%;
+  border: 1px solid $black;
+  padding: 23px 20px 23px 29px;
+  font-size: 16px;
+  background-color: transparent;
+
+  @include d(1199) {
+    padding: 18px 15px 18px 24px;
+  }
+
+  @include d(575) {
+    padding: 15px 15px 15px 20px;
+  }
+}
+
+.custom-label {
+  font-size: 16px;
+  color: $gray;
+  line-height: 1em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.custom-select {
+  width: 100%;
+  border: 1px solid $black;
+  padding: 23px 20px 24px 29px;
+  font-size: 16px;
+  background-color: transparent;
+
+  @include d(1199) {
+    padding: 18px 15px 18px 24px;
+  }
+
+  @include d(575) {
+    padding: 15px 15px 15px 20px;
+  }
+}
+
+.select__box {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+
+  .nice-select {
+    border-radius: 0;
+    height: inherit;
+    float: none;
+    border: 1px sold $black;
+    line-height: 1em;
+  }
+}
+
+.pay-list {
+  display: flex;
+  align-items: center;
+  padding-left: 1px;
+  margin-bottom: 20px;
+
+  &__item {
+    max-width: 50px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__img {
+    width: auto;
+    max-width: 100%;
+  }
+}

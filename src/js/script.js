@@ -8,11 +8,9 @@ const titleHidden = document.querySelector('.site-title.hidden');
 const hiddenBanner = document.querySelector('.hero-img.hidden');
 
 
-function openLikeBlock() {
-
-  let tabLink = document.querySelectorAll('.tab__title');
-  let tabContent = document.querySelectorAll('.tab__content');
-  // let target = tabLink.href;
+function openTabItem() {
+  const tabLink = document.querySelectorAll('.tab__title');
+  const tabContent = document.querySelectorAll('.tab__content');
   [].forEach.call(tabLink, function (el) {
     el.addEventListener('click', function (e) {
       e.preventDefault();
@@ -26,33 +24,57 @@ function openLikeBlock() {
       document.getElementById(e.target.href.split('#')[1]).className += ' open';
     });
   });
+}
+
+openTabItem();
+
+
+const burger = document.querySelector('.humburger');
+const menu = document.querySelector('.nav');
+
+function openMenu() {
+  burger.classList.add('active');
+  menu.classList.add('active');
 
 }
 
+function closeMenu() {
+  burger.classList.remove('active');
+  menu.classList.remove('active');
 
-openLikeBlock();
+}
+
+burger.addEventListener('click', function () {
+  if (burger.classList.contains('active')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+
 
 
 
 
 function showOnLoad() {
   wrapper.classList.remove('js-fadeIn');
-  setTimeout(function () {
-    horizontalLines.forEach.call(horizontalLines, function (el) {
-      el.classList.remove('js-show');
-    });
-    hiddenBanner.classList.remove('hidden');
-    titleHidden.classList.remove('hidden');
-  }, 400);
+  // setTimeout(function () {
+  //   horizontalLines.forEach.call(horizontalLines, function (el) {
+  //     el.classList.remove('js-show');
+  //   });
+  //   hiddenBanner.classList.remove('hidden');
+  //   titleHidden.classList.remove('hidden');
+  // }, 400);
 
-  setTimeout(function () {
-    headerHidden.classList.remove('hidden');
-    performanceHidden.classList.remove('hidden');
+  // setTimeout(function () {
+  //   headerHidden.classList.remove('hidden');
+  //   performanceHidden.classList.remove('hidden');
 
-    verticalLines.forEach.call(verticalLines, function (el) {
-      el.classList.remove('js-show');
-    });
-  }, 1600);
+  //   verticalLines.forEach.call(verticalLines, function (el) {
+  //     el.classList.remove('js-show');
+  //   });
+  // }, 1600);
 }
 
 svg4everybody();
@@ -76,4 +98,5 @@ testWebP(function (support) {
 
 document.addEventListener('DOMContentLoaded', function () {
   showOnLoad();
+    $('.custom-select').niceSelect();
 });

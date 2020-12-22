@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Product 1</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper product-page js-fadeIn">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="product">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <div class="product__content">
+                <h3 class="title-3">Start your <span>14 day</span> free tria</h3>
+                <ul class="product-list">
+                  <li class="product-list__item"><img src="img/product/book.svg" alt="book">
+                    <p>Exact trading instructions delivered live by our elite team of traders.</p>
+                  </li>
+                  <li class="product-list__item"><img src="img/product/market.svg" alt="market">
+                    <p>End of market wrap & commentary from legendary trader Dutch.</p>
+                  </li>
+                  <li class="product-list__item"><img src="img/product/table.svg" alt="table">
+                    <p>Mirror our trades, learn to think like us, and get street smart.</p>
+                  </li>
+                  <li class="product-list__item"><img src="img/product/speed.svg" alt="speed">
+                    <p>+2,678% total net recommended performance.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-5 offset-xl-1">
+              <h3 class="title-3"> <span>Become</span> an Insider</h3>
+              <div class="product__form">
+                <form>
+                  <div class="form__body">
+                    <div class="form__box">
+                      <input type="email" placeholder="Enter your email" class="custom-input">
+                    </div>
+                  </div>
+                  <p>New members will set their password after purchase</p>
+                  <div class="form__btns">
+                    <button type="submit" class="btn btn_arrow">Continue</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  @@include('links/_scripts.html')
+</body>
+
+</html>
