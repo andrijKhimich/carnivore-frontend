@@ -2,11 +2,35 @@
   &-hero {
     padding-top: 144px;
 
+    @include d(1499) {
+      padding-top: 100px;
+    }
+
+    @include d(1199) {
+      padding-top: 80px;
+    }
+
+    @include d(991) {
+      padding-top: 60px;
+    }
+
     &__title {
 
       .title-2,
       & h2 {
         margin-bottom: 100px;
+
+        @include d(1499) {
+          margin-bottom: 80px;
+        }
+
+        @include d(1199) {
+          margin-bottom: 20px;
+        }
+
+        @include d(991) {
+          margin-bottom: 40px;
+        }
       }
 
       b {
@@ -30,6 +54,10 @@
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @include d(991) {
+          display: none;
+        }
       }
 
       &::after {
@@ -40,6 +68,10 @@
         position: absolute;
         bottom: 0;
         right: -50vw;
+
+        @include d(991) {
+          display: none;
+        }
       }
 
       p {
@@ -54,6 +86,11 @@
     &__subtitle {
       margin-bottom: 50px;
       padding-left: 30px;
+
+      @include d(991) {
+        padding-left: 0;
+        margin-bottom: 20px;
+      }
 
       .title-3,
       & h3 {
@@ -71,6 +108,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include d(768) {
+    height: auto;
+    padding-bottom: 60%;
+  }
 }
 
 .play {
@@ -98,6 +140,18 @@
     margin-top: 100px;
     margin-bottom: 20px;
     max-width: 940px;
+
+    @include d(1499) {
+      margin-top: 80px;
+    }
+
+    @include d(1199) {
+      margin-top: 60px;
+    }
+
+    @include d(991) {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -144,6 +198,18 @@
 
   &-side {
     max-width: 420px;
+    padding: 0 15px;
+
+    @include d(768) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+
+    b,
+    strong,
+    span {
+      font-weight: 800;
+    }
 
     ul {
       li {
@@ -155,10 +221,15 @@
   }
 
   &-columns {
-    margin: 40px 0;
+    margin: 40px -15px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include d(991) {
+      margin: 20px -15px;
+    }
 
     b {
       font-weight: 800;
@@ -174,15 +245,6 @@
     }
   }
 
-  &-side {
-
-    b,
-    strong,
-    span {
-      font-weight: 800;
-    }
-  }
-
   &-box {
 
     b,
@@ -192,6 +254,11 @@
 
     p {
       margin: 10px 0 30px;
+
+      @include d(1199) {
+        margin: 10px 0 10px;
+
+      }
     }
 
     &_sm {
@@ -227,6 +294,34 @@
     a {
       font-weight: 800;
       display: block;
+    }
+  }
+}
+
+.trial {
+  background-color: $primary;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: $white;
+  width: 100%;
+
+  p {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+
+    &:before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid $white;
+      border-right: 2px solid $white;
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: rotate(45deg) translate(0, -50%);
     }
   }
 }
