@@ -8,7 +8,63 @@
 
 <body>
   <div class="main-wrapper profile-page js-fadeIn">
-    @@include('components/_header.html')
+<!-- header start -->
+<header class="header line-hrz">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="header-row">
+          <a href="/" class="logo">
+            <img src="img/logo.svg" alt="Carnivore">
+          </a>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-list__item active"><a href="#" class="nav-list__link">HOME</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">SHOP</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">OUR SECRET SAUCE</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">DAILY MARKET WRAP</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">FREE TRIAL</a></li>
+            </ul>
+          </nav>
+          <ul class="tools">
+            <li class="tools__item">
+              <form class="search">
+                <label for="search" class="search-label">
+                  <input type="text" class="search-input" id="search" placeholder="Search">
+                </label>
+                <button type="submit" class="search-btn">
+                  <svg class="svg-tools">
+                    <use xlink:href="img/svg/sprite-svg/sprite.svg#icon-search">
+                    </use>
+                  </svg>
+                </button>
+              </form>
+            </li>
+            <li class="tools__item">
+              <a href="#" class="tools__link logined">
+                <img src="img/home/testimonials3.jpg" alt="user">
+              </a>
+            </li>
+            <li class="tools__item">
+              <a href="#" class="tools__link">
+                <svg class="svg-tools">
+                  <use xlink:href="img/svg/sprite-svg/sprite.svg#icon-cart">
+                  </use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="humburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- header end -->
     <main class="main">
       <section class="profile">
         <div class="container">

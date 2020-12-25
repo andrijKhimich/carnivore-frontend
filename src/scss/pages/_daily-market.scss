@@ -42,6 +42,14 @@
       }
     }
 
+    &__archive {
+
+      .title-5,
+      & h5 {
+        margin-bottom: 20px;
+      }
+    }
+
     &__content {
       padding-top: 60px;
       position: relative;
@@ -324,4 +332,40 @@
       transform: rotate(45deg) translate(0, -50%);
     }
   }
+}
+
+.calendar {
+  font-size: 16px;
+}
+
+.datepicker-picker,
+.datepicker-header {
+  background-color: transparent;
+
+  .button {
+    background-color: transparent;
+  }
+}
+
+.days-of-week {
+  color: $gray;
+}
+
+.datepicker-grid span {
+  color: $black;
+  font-weight: 500;
+}
+
+.datepicker-cell.next:not(.disabled),
+.datepicker-cell.prev:not(.disabled) {
+  color: $black;
+}
+
+.datepicker-cell .day .selected .focused {
+  background-color: $primary;
+}
+
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+  background-color: $primary;
 }

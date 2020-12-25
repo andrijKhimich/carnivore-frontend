@@ -118,3 +118,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   accordionToggle();
 });
+
+
+const elem = document.querySelector('#inline');
+const datepicker = new Datepicker(elem, {
+      // options here
+});
