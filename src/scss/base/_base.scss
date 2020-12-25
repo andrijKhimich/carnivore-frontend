@@ -24,6 +24,7 @@ body {
   -webkit-text-size-adjust: 100%;
   backface-visibility: hidden;
   text-rendering: geometricPrecision;
+  background-color: #F9F7F7;
 
   @include d(1199) {
     font-size: 16px;
@@ -125,8 +126,8 @@ h3 {
 }
 
 h4 {
-  font-size: 28px;
-  line-height: 1.3em;
+  font-size: 30px;
+  line-height: 1.46em;
 
   @include d(991) {
     font-size: 22px;
@@ -315,24 +316,40 @@ input {
     font-family: inherit;
     font-size: 16px;
     color: $textColor;
+
+    @include d(575) {
+      font-size: 14px;
+    }
   }
 
   &::-moz-placeholder {
     font-family: inherit;
     font-size: 16px;
     color: $black;
+
+    @include d(575) {
+      font-size: 14px;
+    }
   }
 
   &:-ms-input-placeholder {
     font-family: inherit;
     font-size: 16px;
     color: $black;
+
+    @include d(575) {
+      font-size: 14px;
+    }
   }
 
   &::placeholder {
     font-family: inherit;
     font-size: 16px;
     color: $black;
+
+    @include d(575) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -374,8 +391,8 @@ textarea {
   padding: 22px 30px;
   transition: background-color $hover-duration $timing;
 
-  @include d(991) {
-    padding: 17px 20px;
+  @include d(1499) {
+    padding: 12px 20px;
   }
 
   @include rh(1024) {
@@ -396,6 +413,7 @@ textarea {
     position: relative;
     justify-content: flex-start;
     padding-left: 60px;
+
     &::before {
       content: "";
       width: 8px;
@@ -466,5 +484,23 @@ textarea {
     font-size: 14px;
     font-weight: 800;
     letter-spacing: .05em;
+    background-color: transparent;
+    border: none;
   }
+}
+
+.lock {
+  width: 18px;
+  margin-left: 20px;
+
+  @include d(768) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+hr {
+  height: 1px;
+  background-color: $black;
+  border: 0;
 }

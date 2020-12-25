@@ -1,0 +1,90 @@
+.about {
+  padding-top: 144px;
+  padding-bottom: 160px;
+
+  @include d(1500) {
+    padding-top: 100px;
+  }
+
+  @include d(1199) {
+    padding-top: 80px;
+  }
+
+  @include d(991) {
+    padding-top: 60px;
+  }
+
+  @include d(768) {
+    padding-bottom: 0;
+  }
+
+  .title-1,
+  & h1 {
+    color: $primary;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    padding-bottom: 40px;
+    height: 630px;
+    overflow: auto;
+    padding-right: 120px;
+    margin-bottom: 160px;
+
+    @include d(768) {
+      margin-bottom: 20px;
+      height: auto;
+      padding-right: 20px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 1px;
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 1px $white;
+      box-shadow: inset 0 0 1px $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary;
+      outline: 1px solid $primary;
+    }
+
+    b {
+      font-weight: 800;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 37vw;
+    border-left: 1px solid $black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #c4c4c4;
+    background-blend-mode: luminosity;
+    height: 100%;
+    opacity: .5;
+
+    @include d(768) {
+      position: static;
+      width: 100%;
+      padding-bottom: 40%;
+    }
+  }
+}

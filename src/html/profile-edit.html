@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project | Profile</title>
+  @@include('links/_head.html')
+</head>
+
+<body>
+  <div class="main-wrapper profile-page js-fadeIn">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="profile">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-2">
+              <div class="profile-sidebar">
+                <h4 class="title-4">Account</h4>
+                <ul class="profile-list">
+                  <li class="profile-list__item"><a href="#" class="profile-list__link active">Profile</a></li>
+                  <li class="profile-list__item"><a href="#" class="profile-list__link">Orders</a></li>
+                  <li class="profile-list__item"><a href="#" class="profile-list__link">Daily wrap</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-8 offset-lg-1">
+              <div class="profile__content">
+
+                <h3 class="title-3">Hello <span>Eve</span></h3>
+                <div class="user-profile">
+                  <form>
+                    <div class="user-profile__title">
+                      <h4 class="title-4">User profile</h4><a href="#" class="link_lg">Edit</a>
+                    </div>
+                    <div class="user-profile__row">
+                      <div class="form__container">
+                        <label for="cardDetails" class="custom-label">Name</label>
+                        <div class="form__box">
+                          <input type="text" id="cardDetails" class="custom-input">
+                        </div>
+                      </div>
+                      <div class="form__container">
+                        <label for="cardDetails" class="custom-label">Email</label>
+                        <div class="form__box">
+                          <input type="text" id="cardDetails" class="custom-input">
+                        </div>
+                      </div>
+                      <div class="form__container">
+                        <label for="cardDetails" class="custom-label">Phone</label>
+                        <div class="form__box">
+                          <input type="text" id="cardDetails" class="custom-input">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__btns">
+                      <button type="submit" class="btn btn_sm">Save</button>
+                      <button type="reset" class="link_lg">Cancel edit</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="user-profile">
+                  <form>
+                    <div class="user-profile__title">
+                      <h4 class="title-4">Payment card</h4><a href="#" class="link_lg">Edit</a>
+                    </div>
+                    <div class="user-profile__row">
+                      <div class="form__container">
+                        <label for="cardDetails" class="custom-label">Billing information</label>
+                        <div class="form__box">
+                          <input type="text" id="cardDetails" class="custom-input">
+                        </div>
+                      </div>
+                      <div class="form__container">
+                        <label for="cardDetails" class="custom-label">Expiration</label>
+                        <div class="form__box">
+                          <input type="text" id="cardDetails" class="custom-input">
+                        </div>
+                      </div>
+                      <div class="form__container">
+                        <label for="cardDetails" class="custom-label">CVC</label>
+                        <div class="form__box">
+                          <input type="text" id="cardDetails" class="custom-input">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form__btns">
+                      <button type="submit" class="btn btn_sm">Save</button>
+                      <button type="reset" class="link_lg">Cancel edit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+  @@include('links/_scripts.html')
+</body>
+
+</html>

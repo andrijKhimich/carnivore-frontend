@@ -1,0 +1,170 @@
+.faq {
+  position: relative;
+
+  &-page {
+    min-height: 100vh;
+
+    .main {
+      min-height: 100vh;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      @include d(768) {
+        position: static;
+      }
+    }
+  }
+
+  &__title {
+    max-width: 420px;
+    padding-top: 144px;
+
+    @include d(1500) {
+      padding-top: 80px;
+    }
+
+    @include d(991) {
+      padding-top: 60px;
+    }
+
+    .title-2,
+    & h2 {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 35vw;
+    padding-bottom: 20%;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #c4c4c4;
+    background-blend-mode: luminosity;
+    opacity: .5;
+    bottom: 166px;
+
+    @include m(1921) {
+      padding-bottom: 15%;
+    }
+
+    @include d(1500) {
+      padding-bottom: 30%;
+    }
+
+    @include d(768) {
+      position: static;
+      width: 100%;
+      padding-bottom: 50%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100vh;
+      background-color: $black;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__content {
+    padding: 144px 0 0 144px;
+    max-height: 100%;
+    max-width: 1000px;
+    margin-bottom: 180px;
+
+    @include d(1500) {
+      padding: 80px 0 0 40px;
+    }
+
+    @include d(991) {
+      padding: 60px 0 0 20px;
+
+    }
+
+    @include d(768) {
+      padding: 20px 0 0 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-accordion {
+    position: relative;
+    max-height: 700px;
+    overflow: auto;
+    padding-right: 140px;
+
+    @include d(1500) {
+      max-height: 320px;
+    }
+
+    @include d(768) {
+      padding-right: 20px;
+      max-height: 100%;
+    }
+
+    //style default scrollbar
+    &::-webkit-scrollbar {
+      width: 1px;
+      background-color: $white;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 1px $white;
+      box-shadow: inset 0 0 1px $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primary;
+      outline: 1px solid $primary;
+    }
+
+    &__link {
+      color: $black;
+      transition: color $hover-duration $timing;
+      position: relative;
+      display: block;
+      padding: 10px 0;
+      font-weight: 500;
+
+      &.active,
+      &:hover {
+        color: $primary;
+      }
+
+
+
+      &:after {
+        content: '\002B';
+        color: $black;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(-50%, -50%);
+        transition: color $hover-duration $timing;
+      }
+
+      &.active:after {
+        content: "\2212";
+        color: $primary;
+      }
+    }
+
+    &__content {
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      margin-bottom: 20px;
+    }
+  }
+}

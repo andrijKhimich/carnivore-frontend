@@ -6,9 +6,10 @@
   width: 100%;
   padding: 43px 0 37px;
   opacity: 1;
-  z-index: 1;
+  z-index: 10;
   transform: translate(0, 0);
   transition: opacity $duration $timing, transform $duration $timing;
+  background-color: #F9F7F7;
 
   @include d(1500) {
     padding: 23px 0px 17px;
@@ -29,7 +30,9 @@
 .logo {
   max-width: 113px;
   position: relative;
-  z-index: 10;@include d(575) {
+  z-index: 10;
+
+  @include d(575) {
     max-width: 110px;
   }
 }
@@ -140,10 +143,12 @@
 
 .tools {
   margin-top: 10px;
+
   @include d(991) {
     margin-right: 30px;
     margin-left: auto;
   }
+
   &__item {
     display: inline-flex;
     align-items: center;
@@ -151,6 +156,7 @@
 
     &:not(:last-child) {
       margin-right: 20px;
+
       @include d(575) {
         margin-right: 10px;
       }
@@ -165,9 +171,11 @@
   position: relative;
   z-index: 10;
   display: none;
+
   @include d(991) {
     display: inline-block;
   }
+
   span {
     display: block;
     width: 100%;
@@ -206,6 +214,62 @@
 
     span:nth-child(3) {
       transform: rotate(-45deg) translate(8px, -9px)
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  &__link {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      padding-right: 40px;
+      margin-right: 40px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-top: 2px solid $black;
+        border-right: 2px solid $black;
+        transform: rotate(45deg) translate(0, -50%);
+      }
+    }
+
+    span {
+      display: block;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 50%;
+      margin-right: 10px;
+      color: $link;
+      background-color: $white;
+      border: 1px solid $link;
+
+    }
+
+    &.active {
+      span {
+        background-color: $link;
+        color: $white;
+      }
     }
   }
 }

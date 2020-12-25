@@ -44,15 +44,23 @@ function closeMenu() {
 
 }
 
-burger.addEventListener('click', function () {
-  if (burger.classList.contains('active')) {
-    closeMenu();
-  } else {
-    openMenu();
+function accordionToggle() {
+  const accordionLink = document.getElementsByClassName("faq-accordion__link");
+  let i;
+
+  for (i = 0; i < accordionLink.length; i++) {
+    accordionLink[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
   }
-});
-
-
+}
 
 
 
@@ -98,5 +106,15 @@ testWebP(function (support) {
 
 document.addEventListener('DOMContentLoaded', function () {
   showOnLoad();
-    $('.custom-select').niceSelect();
+  burger.addEventListener('click', function () {
+    if (burger.classList.contains('active')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  $('.custom-select').niceSelect();
+
+  accordionToggle();
 });
