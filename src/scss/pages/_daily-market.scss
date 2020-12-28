@@ -53,6 +53,19 @@
     &__content {
       padding-top: 60px;
       position: relative;
+      padding-left: 30px;
+
+      @include d(991) {
+        padding-left: 0;
+      }
+
+      .video {
+        margin-left: -30px;
+
+        @include d(991) {
+          margin-left: 0;
+        }
+      }
 
       &::before {
         content: "";
@@ -82,18 +95,24 @@
         }
       }
 
-      p {
+      b {
         font-weight: 800;
+      }
 
+      p {
+        margin-bottom: 20px;
         span {
           color: $primary;
         }
+      }
+      .link_lg {
+        margin-bottom: 50px;
       }
     }
 
     &__subtitle {
       margin-bottom: 50px;
-      padding-left: 30px;
+
 
       @include d(991) {
         padding-left: 0;
@@ -296,6 +315,11 @@
 
   &__img {
     margin-bottom: 15px;
+
+    @include d(768) {
+      width: 100%;
+    }
+
   }
 
   &__content {

@@ -9,6 +9,12 @@
       display: none;
     }
   }
+
+  .header-row {
+    @include d(575) {
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .product {
@@ -72,6 +78,7 @@
       }
     }
   }
+
   &__content {
     max-width: 565px;
   }

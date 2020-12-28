@@ -219,9 +219,16 @@
 }
 
 .pagination {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin: 0 auto;
+
+  @include d(575) {
+    order: 1;
+    margin: 10px auto;
+    width: 100%;
+    justify-content: center;
+  }
 
   &__link {
     font-size: 18px;
@@ -229,6 +236,10 @@
     align-items: center;
     position: relative;
     font-weight: 500;
+
+    @include d(768) {
+      font-size: 14px;
+    }
 
     &:not(:last-child) {
       padding-right: 40px;
@@ -263,6 +274,12 @@
       background-color: $white;
       border: 1px solid $link;
 
+      @include d(768) {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        flex: 0 0 28px;
+      }
     }
 
     &.active {

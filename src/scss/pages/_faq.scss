@@ -54,8 +54,12 @@
       padding-bottom: 15%;
     }
 
+    @include d(1600) {
+      padding-bottom: 15%;
+    }
+
     @include d(1500) {
-      padding-bottom: 30%;
+      padding-bottom: 25%;
     }
 
     @include d(768) {
@@ -134,6 +138,7 @@
       display: block;
       padding: 10px 0;
       font-weight: 500;
+      padding-right: 30px;
 
       &.active,
       &:hover {
@@ -148,7 +153,7 @@
         font-weight: bold;
         position: absolute;
         top: 50%;
-        right: 20px;
+        right: 10px;
         transform: translate(-50%, -50%);
         transition: color $hover-duration $timing;
       }
@@ -160,7 +165,6 @@
     }
 
     &__content {
-      background-color: white;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
