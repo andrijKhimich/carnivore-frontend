@@ -379,6 +379,7 @@ textarea {
   justify-content: center;
   border: none;
   background-color: $primary;
+  border: 1px solid transparent;
   font-size: 14px;
   font-weight: 800;
   line-height: 1.23em;
@@ -388,18 +389,19 @@ textarea {
   min-width: 261px;
   cursor: pointer;
   white-space: nowrap;
-  padding: 22px 30px;
-  transition: background-color $hover-duration $timing;
+  padding: 20px 30px;
+  transition: background-color $hover-duration $timing, border-color $hover-duration $timing, color $hover-duration $timing;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+    border-color: $primary;
+  }
 
   @include d(1499) {
     padding: 12px 20px;
   }
 
-  @include rh(1024) {
-    &:hover {
-      background-color: $primaryHover;
-    }
-  }
 
   &_sm {
     min-width: 217px;
@@ -508,3 +510,4 @@ hr {
 .ttu {
   text-transform: uppercase;
 }
+

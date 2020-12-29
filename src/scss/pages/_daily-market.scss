@@ -101,10 +101,12 @@
 
       p {
         margin-bottom: 20px;
+
         span {
           color: $primary;
         }
       }
+
       .link_lg {
         margin-bottom: 50px;
       }
@@ -364,10 +366,10 @@
 
 .datepicker-picker,
 .datepicker-header {
-  background-color: transparent;
+  background-color: #F9F7F7;
 
   .button {
-    background-color: transparent;
+    background-color: #F9F7F7;
   }
 }
 
@@ -392,4 +394,24 @@
 .datepicker-cell.selected,
 .datepicker-cell.selected:hover {
   background-color: $primary;
+}
+
+#calendar {
+  display: none;
+  background-color: transparent;
+  border: 1px solid $primary;
+  line-height: 32px;
+  max-width: 180px;
+
+  @include d(991) {
+    display: block;
+  }
+}
+
+#inline {
+  display: block;
+
+  @include d(991) {
+    display: none;
+  }
 }

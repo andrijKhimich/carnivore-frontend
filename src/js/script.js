@@ -67,22 +67,6 @@ function accordionToggle() {
 
 function showOnLoad() {
   wrapper.classList.remove('js-fadeIn');
-  // setTimeout(function () {
-  //   horizontalLines.forEach.call(horizontalLines, function (el) {
-  //     el.classList.remove('js-show');
-  //   });
-  //   hiddenBanner.classList.remove('hidden');
-  //   titleHidden.classList.remove('hidden');
-  // }, 400);
-
-  // setTimeout(function () {
-  //   headerHidden.classList.remove('hidden');
-  //   performanceHidden.classList.remove('hidden');
-
-  //   verticalLines.forEach.call(verticalLines, function (el) {
-  //     el.classList.remove('js-show');
-  //   });
-  // }, 1600);
 }
 
 svg4everybody();
@@ -120,7 +104,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const elem = document.querySelector('#inline');
-const datepicker = new Datepicker(elem, {
-      // options here
-});
+
+function initCalendar() {
+  const elem = document.querySelector('#inline');
+  const datepicker = new Datepicker(elem, {});
+}
+
+function initCalendarInput() {
+  const elem = document.querySelector('input[name="datepicker"]');
+  const datepicker = new Datepicker(elem, {});
+}
+
+const calendar = document.querySelector('.calendar');
+if (calendar) {
+  initCalendar();
+  initCalendarInput();
+}
