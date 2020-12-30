@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <div class="main-wrapper home-page js-fadeIn">
+  <div class="main-wrapper daily-page js-fadeIn">
     @@include('components/_header.html')
     <main class="main">
       <section class="daily-hero">
@@ -22,7 +22,9 @@
                 <h5 class="title-5">Archive</h5>
                 <div class="calendar">
                   <div id="inline" data-date="01/05/2020"></div>
-                  <input type="text" name="datepicker" id="calendar">
+                  <div class="form__box">
+                    <input type="text" name="datepicker" id="calendar" placeholder="Open calendar...">
+                  </div>
                 </div>
               </div>
             </div>
@@ -326,6 +328,9 @@
       </section>
     </main>
     @@include('components/_footer.html')
+    <a href="#" class="trial">
+      <p>Become an Insider - Start Your Free Trial</p>
+    </a>
   </div>
   @@include('links/_scripts.html')
 </body>
