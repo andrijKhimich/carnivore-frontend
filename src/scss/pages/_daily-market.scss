@@ -52,10 +52,12 @@
       .form__box {
         max-width: 260px;
         display: none;
+
         @include d(991) {
           display: block;
         }
       }
+
       .title-5,
       & h5 {
         margin-bottom: 20px;
@@ -431,6 +433,7 @@
     line-height: 37px;
   }
 }
+
 #inline {
   display: block;
 
