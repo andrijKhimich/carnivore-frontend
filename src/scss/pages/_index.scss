@@ -288,7 +288,7 @@
     flex-wrap: wrap;
     margin: 0 -20px;
 
-    @include d(575) {
+    @include d(1199) {
       margin: 0 -10px;
     }
 
@@ -576,7 +576,7 @@
 .banner_sm {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center;
   background-color: #c4c4c4;
   background-blend-mode: luminosity;
   height: 304px;
@@ -662,6 +662,7 @@
 
     @include d(991) {
       margin-bottom: 60px;
+      margin-top: 40px;
     }
 
     p {
