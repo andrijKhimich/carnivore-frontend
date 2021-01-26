@@ -152,7 +152,7 @@ h5 {
 }
 
 h6 {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1em;
 
   @include d(991) {
@@ -161,6 +161,9 @@ h6 {
 
   @include d(768) {
     font-size: 16px;
+  }
+  span {
+    color: $primary
   }
 }
 

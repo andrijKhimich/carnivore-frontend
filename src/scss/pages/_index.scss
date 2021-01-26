@@ -1,5 +1,6 @@
 .main {
   padding-top: 122px;
+
   @include d(1500) {
     padding-top: 82px;
   }
@@ -34,6 +35,18 @@
   }
 }
 
+.title-descr {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.167em;
+  max-width: 400px;
+  margin-bottom: 20px;
+
+  span {
+    color: $primary;
+  }
+}
+
 .subtitle {
   line-height: 1.4em;
   max-width: 550px;
@@ -65,6 +78,7 @@
     background-blend-mode: luminosity;
     opacity: .7;
     transform: translate(0, 0);
+    filter: grayscale(1);
     transition: transform $duration $timing, opacity $duration $timing;
 
     @include d(768) {
@@ -105,13 +119,11 @@
   }
 
   &__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 93px 35px 99px 0;
+    font-weight: 800;
+    padding: 53px 0 39px 0;
 
     @include d(1800) {
-      padding: 50px 20px 30px 0;
+      padding: 50px 0 30px 0;
     }
 
     @include d(1320) {
@@ -123,83 +135,69 @@
     }
   }
 
-  &__text {
+  &__value {
     font-size: 24px;
-    line-height: 1em;
-    font-weight: 900;
-    width: 250px;
+    font-weight: 800;
 
-    @include d(1800) {
-      font-size: 22px;
-      width: 200px;
-    }
-
-    @include d(1320) {
+    @include d(1440) {
       font-size: 18px;
-      width: 160px;
     }
 
     @include d(1199) {
       font-size: 16px;
     }
 
-    @include d(400) {
-      font-size: 14px;
-      width: 130px;
-    }
-
-    &:last-of-type {
-      width: 100px;
-      margin-left: 90px;
-
-      @include d(1800) {
-        margin-left: 15px;
-      }
-
-      @include d(1199) {
-        margin-left: 10px;
-        width: 80px;
-      }
-
-      @include d(400) {
-        width: 50px;
-      }
-
+    p {
+      line-height: 1em;
     }
   }
 
-  &__value {
-    font-size: 40px;
-    line-height: 1em;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    color: $primary;
-    -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: $primary;
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    @include d(1500) {
-      font-size: 30px;
+    @include d(480) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    max-width: 280px;
+
+    @include d(480) {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    &:first-child {
+      margin-right: 40px;
+
+      @include d(1199) {
+        margin-right: 10px;
+      }
+
+      @include d(480) {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__logo {
+    filter: grayscale(1);
+    margin-right: 20px;
+    max-width: 130px;
+
+    @include d(1440) {
+      max-width: 100px;
     }
 
     @include d(1199) {
-      font-size: 20px;
-    }
-
-    @include d(991) {
-      font-size: 36px;
-    }
-
-    @include d(575) {
-      font-size: 28px;
-    }
-
-    @include d(480) {
-      font-size: 20px;
-    }
-
-    @include d(400) {
-      font-size: 16px;
+      max-width: 80px;
     }
   }
 
@@ -215,6 +213,18 @@
 
     @include d(575) {
       padding: 20px 0;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    letter-spacing: .05em;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include d(1199) {
+      margin-bottom: 20px;
+      font-size: 16px;
     }
   }
 
@@ -287,7 +297,7 @@
       padding: 0 20px;
       margin-bottom: 45px;
 
-      @include d(575) {
+      @include d(1199) {
         flex: 0 0 50%;
         padding: 0 10px;
       }
@@ -327,26 +337,78 @@
 
   &__phone {
     position: absolute;
-    left: -50%;
+    left: -65%;
     top: 50%;
     transform: translate(80%, -50%);
 
     @include d(1500) {
-      width: 240px;
-      left: -40%;
+      width: 300px;
+      left: -50%;
     }
 
     @include d(768) {
       display: none;
     }
   }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 0;
+
+    @include d(1199) {
+      display: block;
+      padding: 40px 15px;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      width: 100vw;
+      height: 1px;
+      background-color: $black;
+    }
+
+    &:before {
+      top: 0;
+    }
+
+    &:after {
+      bottom: 0;
+    }
+
+    .btn {
+      align-items: flex-start;
+    }
+  }
+
+  &__mark {
+    max-width: 160px;
+    margin-right: 40px;
+    width: 100%;
+  }
+
+  p {
+    margin-right: 40px;
+    max-width: 450px;
+
+    @include d(1199) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .testimonials {
-  padding-top: 157px;
+  padding-top: 90px;
 
   @include d(1500) {
-    padding-top: 100px;
+    padding-top: 60px;
   }
 
   &-container {
@@ -356,8 +418,11 @@
 
   .title-2,
   & h2 {
-    max-width: 650px;
-    margin-bottom: 34px;
+    margin-bottom: 70px;
+
+    @include d(1500) {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -515,7 +580,6 @@
   background-color: #c4c4c4;
   background-blend-mode: luminosity;
   height: 304px;
-  opacity: .5;
 
   @include d(575) {
     height: auto;
@@ -525,7 +589,7 @@
 
 .daily {
   padding-top: 195px;
-  padding-bottom: 400px;
+  padding-bottom: 160px;
   position: relative;
   border-top: 1px solid $black;
   border-bottom: 1px solid $black;
@@ -533,7 +597,6 @@
 
   @include d(1500) {
     padding-top: 130px;
-    padding-bottom: 340px;
   }
 
   @include d(1199) {
@@ -545,21 +608,32 @@
     padding-bottom: 0;
   }
 
+  &__box {
+    margin-bottom: 30px;
+
+    .title-6,
+    & .h6 {
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+  }
+
   &-img {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 43vw;
     height: 100%;
-    max-height: 430px;
-    background-size: 120%;
+    max-height: 660px;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #c4c4c4;
     background-blend-mode: luminosity;
 
     @include d(1199) {
-      max-height: 260px;
+      max-height: 360px;
     }
 
     @include d(991) {
@@ -574,13 +648,17 @@
       bottom: 0;
       right: 0;
       width: 1px;
-      height: 250%;
+      height: 500%;
       background-color: $black;
     }
   }
 
   &__content {
-    max-width: 560px;
+
+    h3,
+    & .title-3 {
+      max-width: 520px;
+    }
 
     @include d(991) {
       margin-bottom: 60px;
@@ -594,24 +672,117 @@
 }
 
 .best {
+  padding-top: 140px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: #F9F7F7;
+    top: 0;
+    left: 0;
+    width: calc(43vw - 1px);
+    height: 100%;
+    z-index: 1;
+
+    @include d(1199) {
+      display: none;
+    }
+  }
+
+  &:after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: $black;
+    position: absolute;
+    top: 0;
+    left: calc(43vw - 1px);
+
+    @include d(1199) {
+      display: none;
+    }
+  }
+
   @include d(1199) {
-    padding: 40px 0;
+    padding-top: 80px;
   }
 
   &__title {
-    margin-top: 175px;
+    max-width: 460px;
+    position: relative;
+    z-index: 1;
+  }
 
-    @include d(1199) {
-      margin-top: 60px;
+  &-list {
+    position: relative;
+    z-index: 1;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+
+      img,
+      picture {
+        margin-right: 30px;
+        width: 50px;
+      }
+    }
+  }
+
+  &__form {
+    padding-bottom: 100px;
+
+    @include d(991) {
+      padding: 60px 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @include d(767) {
+      display: block;
     }
 
-    .title-2,
-    & h2 {
-      margin-bottom: 0;
+    &::before {
+      content: "";
+      width: 150vw;
+      height: 1px;
+      position: absolute;
+      top: -1px;
+      right: -50vw;
+      background-color: $black;
+
+      @include d(1199) {
+        display: none;
+      }
     }
 
-    p {
-      margin-bottom: 30px;
+    &-logo {
+      max-width: 210px;
+      margin: 0 auto;
+      @include d(767) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-img {
+      width: 50%;
+      filter: grayscale(1);
+
+      @include d(767) {
+        width: calc(100% + 30px);
+        margin: 0 -15px;
+      }
     }
   }
 }
