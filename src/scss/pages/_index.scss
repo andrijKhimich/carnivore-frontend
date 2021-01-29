@@ -402,6 +402,16 @@
       margin-bottom: 20px;
     }
   }
+  &__text {
+    p {
+      padding-bottom: 10px;
+    }
+    .btn_next {
+      @include d(1199) {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .testimonials {

@@ -1,0 +1,27 @@
+.modal {
+  background-color: $white;
+  padding: 90px 120px;
+  position: relative;
+  max-width: 1000px;
+  display: none;
+
+  @include d(1199) {
+    padding: 60px 80px;
+  }
+
+  @include d(991) {
+    padding: 40px;
+  }
+
+  @include d(767) {
+    padding: 40px;
+  }
+
+  .title-2 & h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+}

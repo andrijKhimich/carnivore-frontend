@@ -128,9 +128,13 @@
                 <div class="trades__mark">
                   <img src="img/home/trade-logo.png" alt="logo">
                 </div>
-                <p>Whether you’re trading newbie or a pro. Whether you have a little to invest or a lot, we guarantee
-                  you’ll make 5x your
-                  monthly fees simply by mirroring our trades.</p>
+                <div class="trades__text">
+                  <p>Whether you’re trading newbie or a pro. Whether you have a little to invest or a lot, we guarantee
+                    you’ll make 5x your
+                    monthly fees simply by mirroring our trades.</p>
+                  <a href="#termsModal" data-fancybox class="btn_next">Terms and Conditions</a>
+                </div>
+
                 <a href="#" class="btn">Start 14 Day Free Trial</a>
               </div>
             </div>
@@ -291,31 +295,31 @@
           <div class="row">
             <div class="col-lg-6 col-xl-4 offset-xl-1">
               <div class="best__list">
-              <div class="best__title">
-                <h3 class="title-3">Why not start your <br> <span>14-day FREE</span> trial now?</h3>
-              </div>
-              <ul class="best-list">
-                <li class="best-list__item">
-                  <img src="img/home/sale.svg" alt="sale">
-                  Free 14-Day trial.
-                </li>
-                <li class="best-list__item">
-                  <img src="img/home/chat.svg" alt="chat">
-                  Daily, real-time text alerts delivered to your smartphone.
-                </li>
-                <li class="best-list__item">
-                  <img src="img/home/wrapping.svg" alt="wrapping">
-                  Daily market wrap.
-                </li>
-                <li class="best-list__item">
-                  <img src="img/home/book.svg" alt="book">
-                  Free e-Book.
-                </li>
-                <li class="best-list__item">
-                  <img src="img/home/guarantee.svg" alt="guarantee">
-                  Earn 5x your monthly fee guarante.
-                </li>
-              </ul>
+                <div class="best__title">
+                  <h3 class="title-3">Why not start your <br> <span>14-day FREE</span> trial now?</h3>
+                </div>
+                <ul class="best-list">
+                  <li class="best-list__item">
+                    <img src="img/home/sale.svg" alt="sale">
+                    Free 14-Day trial.
+                  </li>
+                  <li class="best-list__item">
+                    <img src="img/home/chat.svg" alt="chat">
+                    Daily, real-time text alerts delivered to your smartphone.
+                  </li>
+                  <li class="best-list__item">
+                    <img src="img/home/wrapping.svg" alt="wrapping">
+                    Daily market wrap.
+                  </li>
+                  <li class="best-list__item">
+                    <img src="img/home/book.svg" alt="book">
+                    Free e-Book.
+                  </li>
+                  <li class="best-list__item">
+                    <img src="img/home/guarantee.svg" alt="guarantee">
+                    Earn 5x your monthly fee guarante.
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="col-lg-6 col-xl-6 offset-xl-1">
@@ -351,6 +355,8 @@
       </section>
     </main>
     @@include('components/_footer.html')
+    @@include('components/_modal.html')
+
   </div>
   @@include('links/_scripts.html')
 </body>
